@@ -1,4 +1,4 @@
-# DAHAB COFFEE — Digital Menu
+# AINDALIA — Digital Menu
 
 ## Stack
 Vanilla JS SPA (ES6 modules, no bundler) · Supabase (`categories`, `menu_items`, `settings`) · i18next + lang detector from esm.sh · Dark-mode CSS only
@@ -26,7 +26,7 @@ npx serve . --listen 3000
 
 ## Supabase
 - Schema: `supabase-schema.sql` (tables, RLS, seed data) — **authoritative source of truth**
-- Project ref: `twcwukrgbgspqajofels`
+- Project ref: `dnjqsgnpvpvtttgnjolg`
 - `.env` at root with `SUPABASE_URL`, `SUPABASE_ANON_KEY`, `SUPABASE_SERVICE_KEY`, `SUPABASE_SBP`
 - To run SQL: `POST https://api.supabase.com/v1/projects/{ref}/database/query` with PAT as Bearer + `{"query": "..."}`
 - DB text fields (`categories.name`, `menu_items.name`, `menu_items.description`) are JSONB: `{fr: "...", en: "...", es: "...", ar: "..."}` — use `localized(value)` to display, pass the full JSONB object when saving
@@ -50,7 +50,7 @@ npx serve . --listen 3000
 - i18n: always add new keys to all 4 locale files (`fr.js`, `en.js`, `es.js`, `ar.js`)
 - `categories.name` / `menu_items.category_id` is a real FK (`ON DELETE RESTRICT`) — never filter by text
 - XLSX import is backward-compatible: old files with only FR/EN/ES columns still work (missing lang columns default to empty)
-- Auth credentials: `admin@dahabcoffee.com` / `dahabcoffee2026`
+- Auth credentials: `admin@aindalia.com` / `aindalia2026`
 - Auth has client-side lock: 3 failed attempts → 24h block (stored in localStorage key `dahabcoffee_lock`)
 - **No tests exist** — Playwright `@playwright/test@^1.61.0` is a dependency but no test files or config are present
 - **Stale docs**: `README.md` references a `luxora/` subdirectory (files are at root). `SUPABASE_SETUP.md` and `SUPABASE_MIGRATION_GUIDE.md` claim fallback data exists in `menu.js` — it does not; the app shows toasts on failure

@@ -93,11 +93,11 @@
   font-family: var(--font-arabic-full);
 }
 
-[dir="rtl"] .dahabcoffee-modal-btn {
+[dir="rtl"] .aindalia-modal-btn {
   font-family: var(--font-arabic-full);
 }
 
-[dir="rtl"] .dahabcoffee-modal-field {
+[dir="rtl"] .aindalia-modal-field {
   font-family: var(--font-arabic-full);
 }
 
@@ -165,7 +165,7 @@
   font-family: var(--font-arabic-heading);
 }
 
-[dir="rtl"] .dahabcoffee-modal-title {
+[dir="rtl"] .aindalia-modal-title {
   font-family: var(--font-arabic-heading);
 }
 

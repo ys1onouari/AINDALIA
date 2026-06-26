@@ -65,25 +65,25 @@ CREATE POLICY "Public read" ON menu_items  FOR SELECT USING (TRUE);
 CREATE POLICY "Public read" ON settings   FOR SELECT USING (TRUE);
 
 -- Admin write (authenticated)
-CREATE POLICY "Auth write" ON categories
+CREATE POLICY "Auth insert" ON categories
   FOR INSERT WITH CHECK (auth.role() = 'authenticated');
-CREATE POLICY "Auth write" ON categories
+CREATE POLICY "Auth update" ON categories
   FOR UPDATE USING (auth.role() = 'authenticated');
-CREATE POLICY "Auth write" ON categories
+CREATE POLICY "Auth delete" ON categories
   FOR DELETE USING (auth.role() = 'authenticated');
 
-CREATE POLICY "Auth write" ON menu_items
+CREATE POLICY "Auth insert" ON menu_items
   FOR INSERT WITH CHECK (auth.role() = 'authenticated');
-CREATE POLICY "Auth write" ON menu_items
+CREATE POLICY "Auth update" ON menu_items
   FOR UPDATE USING (auth.role() = 'authenticated');
-CREATE POLICY "Auth write" ON menu_items
+CREATE POLICY "Auth delete" ON menu_items
   FOR DELETE USING (auth.role() = 'authenticated');
 
-CREATE POLICY "Auth write" ON settings
+CREATE POLICY "Auth insert" ON settings
   FOR INSERT WITH CHECK (auth.role() = 'authenticated');
-CREATE POLICY "Auth write" ON settings
+CREATE POLICY "Auth update" ON settings
   FOR UPDATE USING (auth.role() = 'authenticated');
-CREATE POLICY "Auth write" ON settings
+CREATE POLICY "Auth delete" ON settings
   FOR DELETE USING (auth.role() = 'authenticated');
 
 -- =====================================

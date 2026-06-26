@@ -1,4 +1,4 @@
-# TYPOGRAPHY RECOMMENDATIONS — DahabCoffee Dish Cards
+# TYPOGRAPHY RECOMMENDATIONS — AINDALIA Dish Cards
 
 > **Purpose:** Analysis of why menu item names and prices may feel less premium.
 > **Scope:** Dish card typography, visual hierarchy, spacing, and density.

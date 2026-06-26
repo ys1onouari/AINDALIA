@@ -592,7 +592,7 @@ Déclencheur : `Chronomètre` → `Toutes les heures`.
 | **Date** | 26 juin 2026 |
 | **Auteur** | Service technique |
 | **Décision** | Validation finale — Version de référence |
-| **Projet d'origine** | DAHAB COFFEE — Digital Menu (ref: `kwurnxhbftgaxkbikvdd`) |
+| **Projet d'origine** | AINDALIA — Digital Menu (ref: `kwurnxhbftgaxkbikvdd`) |
 
 ### Évolutions à venir
 

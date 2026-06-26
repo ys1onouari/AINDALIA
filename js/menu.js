@@ -142,11 +142,11 @@ export function renderBranding() {
   const s = SETTINGS;
   if (titleEl) {
     titleEl.classList.remove('skeleton');
-    titleEl.textContent = s.restaurant_name || t('hero.fallback');
+    titleEl.textContent = localized(s.restaurant_name) || t('hero.fallback');
   }
   if (subtitleEl && s.restaurant_subtitle) {
     subtitleEl.classList.remove('skeleton');
-    subtitleEl.textContent = s.restaurant_subtitle;
+    subtitleEl.textContent = localized(s.restaurant_subtitle);
   }
   if (s.restaurant_name) {
     const name = localized(s.restaurant_name);

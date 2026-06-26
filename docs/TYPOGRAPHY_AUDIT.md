@@ -1,4 +1,4 @@
-# TYPOGRAPHY AUDIT — DahabCoffee
+# TYPOGRAPHY AUDIT — AINDALIA
 
 > **Purpose:** Analysis only. Document every typography decision, find gaps,
 > and produce actionable recommendations.
@@ -53,8 +53,8 @@ From `index.html`:
 
 | Family | Components | Count |
 |---|---|---|
-| **Inter** | `body`, `.lang-btn`, `.desktop-nav-item`, `.nav-item span`, `.btn-primary`, `.cat-label`, `.chip`, `.section-eyebrow`, `.hero-eyebrow`, `.hero-tagline`, `.wa-btn`, `.cart-checkout`, `.cart-total-label`, `.cart-remove`, `.cart-empty`, `.qty-btn`, `.qty-num`, `.auth-sub`, `.auth-input`, `.auth-btn`, `.auth-toggle-label`, `.auth-error`, `.auth-lock`, `.badge`, `.admin-nav-item`, `.admin-logout`, `.admin-btn-add/export/import`, `.admin-tbl th/td`, `.admin-modal .form-group *`, `.admin-upload-label`, `.toggle-label`, `.dahabcoffee-modal-message`, `.dahabcoffee-modal-field`, `.dahabcoffee-modal-btn`, `.contact-info p/a`, `.no-results`, `.logo-sub` | ~45 components |
-| **Playfair Display** | `.section-title`, `.hero-title`, `.dish-name`, `.dish-price`, `.cart-title`, `.cart-total-amount`, `.cart-item-price`, `.auth-title`, `.contact-info h3`, `.google-review-score`, `.admin-sidebar-header`, `.admin-view-header h1`, `.admin-modal h2`, `.dahabcoffee-modal-title` | ~14 components |
+| **Inter** | `body`, `.lang-btn`, `.desktop-nav-item`, `.nav-item span`, `.btn-primary`, `.cat-label`, `.chip`, `.section-eyebrow`, `.hero-eyebrow`, `.hero-tagline`, `.wa-btn`, `.cart-checkout`, `.cart-total-label`, `.cart-remove`, `.cart-empty`, `.qty-btn`, `.qty-num`, `.auth-sub`, `.auth-input`, `.auth-btn`, `.auth-toggle-label`, `.auth-error`, `.auth-lock`, `.badge`, `.admin-nav-item`, `.admin-logout`, `.admin-btn-add/export/import`, `.admin-tbl th/td`, `.admin-modal .form-group *`, `.admin-upload-label`, `.toggle-label`, `.aindalia-modal-message`, `.aindalia-modal-field`, `.aindalia-modal-btn`, `.contact-info p/a`, `.no-results`, `.logo-sub` | ~45 components |
+| **Playfair Display** | `.section-title`, `.hero-title`, `.dish-name`, `.dish-price`, `.cart-title`, `.cart-total-amount`, `.cart-item-price`, `.auth-title`, `.contact-info h3`, `.google-review-score`, `.admin-sidebar-header`, `.admin-view-header h1`, `.admin-modal h2`, `.aindalia-modal-title` | ~14 components |
 | **Cormorant Garamond** | `.hero-subtitle` | 1 component |
 | **Tajawal** | RTL override for all above components | ~30 rules in `rtl.css` |
 | **Noto Naskh Arabic** | Fallback in all Tajawal stacks | fallback only |
@@ -83,11 +83,11 @@ From `index.html`:
 | `--text-micro` | 0.625rem | **10px** | `admin-tbl th`, `td::before` (label), admin dense |
 | `--text-tiny` | 0.6875rem | **11px** | `.lang-btn`, admin sidebar span, admin nav-item |
 | `--text-xs` | 0.75rem | **12px** | `.section-eyebrow`, `.desktop-nav-item`, `.btn-primary`, `.cat-label`, `.chip`, `.cart-checkout`, `.wa-btn`, `.auth-toggle-label`, `.auth-error`, `.admin-btn-add`, admin modal buttons, `.no-results`, `.toggle-label` |
-| `--text-tight` | 0.8125rem | **13px** | Admin inputs, `.dahabcoffee-modal-field` |
-| `--text-sm` | 0.875rem | **14px** | `.hero-tagline`, `.auth-sub`, `.cart-item-name`, `.cart-remove`, `.qty-num`, `.contact-info p/a`, `.dahabcoffee-modal-message`, `.admin-action-btn`, admin modal labels |
+| `--text-tight` | 0.8125rem | **13px** | Admin inputs, `.aindalia-modal-field` |
+| `--text-sm` | 0.875rem | **14px** | `.hero-tagline`, `.auth-sub`, `.cart-item-name`, `.cart-remove`, `.qty-num`, `.contact-info p/a`, `.aindalia-modal-message`, `.admin-action-btn`, admin modal labels |
 | `--text-base` | 1rem | **16px** | `html`, `.dish-price` (also uses `--text-2xl`), `.contact-info h3` |
 | `--text-lg` | 1.125rem | **18px** | `.dish-name`, admin sidebar header, admin modal h2 (mobile) |
-| `--text-xl` | 1.25rem | **20px** | `.cart-title`, `.auth-title`, `.dahabcoffee-modal-title`, admin view header h1 (mobile) |
+| `--text-xl` | 1.25rem | **20px** | `.cart-title`, `.auth-title`, `.aindalia-modal-title`, admin view header h1 (mobile) |
 | `--text-2xl` | 1.5rem | **24px** | `.dish-price`, `.auth-title`, admin view header h1 (desktop) |
 | `--text-score` | 1.75rem | **28px** | `.google-review-score` (only) |
 | `--text-3xl` | 2rem | **32px** | `.section-title`, `.cart-total-amount` |
@@ -132,7 +132,7 @@ From `index.html`:
 | `--fw-light` | 300 | `.hero-subtitle` (Cormorant Garamond italic) |
 | `--fw-regular` | 400 | `.hero-eyebrow`, body text default |
 | `--fw-medium` | 500 | `.section-eyebrow`, `.desktop-nav-item`, `.nav-item span`, `.cat-label`, `.chip`, admin nav-item |
-| `--fw-semibold` | 600 | `.btn-primary`, `.wa-btn`, `.cart-checkout`, `.auth-btn`, `.dish-name`, `.contact-info h3`, `.admin-btn-export/import`, `.admin-tbl th`, `td::before`, `.dahabcoffee-modal-title` |
+| `--fw-semibold` | 600 | `.btn-primary`, `.wa-btn`, `.cart-checkout`, `.auth-btn`, `.dish-name`, `.contact-info h3`, `.admin-btn-export/import`, `.admin-tbl th`, `td::before`, `.aindalia-modal-title` |
 | `--fw-bold` | 700 | `.section-title`, `.hero-title`, `.dish-price`, `.cart-total-amount`, `.cart-item-price`, `.google-review-score`, admin sidebar header, admin view header h1, `.badge` |
 
 ### 3.2 Non-Token Weights
@@ -158,7 +158,7 @@ None found. All font-weight declarations in CSS now use `var(--fw-*)` tokens.
 | `--lh-snug` | 1.2 | `.google-review-score` |
 | `--lh-normal` | 1.25 | `.hero-title` |
 | `--lh-relaxed` | 1.5 | Body text, `.dish-name`, `.auth-sub`, `.cart-item-name`, `.cart-empty`, admin nav-item |
-| `--lh-loose` | 1.6 | `.dahabcoffee-modal-message`, `.contact-info p`, admin labels |
+| `--lh-loose` | 1.6 | `.aindalia-modal-message`, `.contact-info p`, admin labels |
 | `--lh-looser` | 1.7 | `.hero-tagline` |
 
 ### 4.2 Non-Token Line Heights
@@ -237,7 +237,7 @@ LEVEL 3 — Component Headings
   .cart-title         Playfair Display —  --text-xl (20px)  —  —
   .cart-total-amount  Playfair Display —  --text-3xl (32px)  —  —
   .auth-title         Playfair Display —  --text-2xl (24px)  —  —
-  .dahabcoffee-modal-title  Playfair Display 600  --text-xl (20px)  —  —
+  .aindalia-modal-title  Playfair Display 600  --text-xl (20px)  —  —
 
 LEVEL 4 — Content Text
   body                Inter —  --text-base (16px)  —  —
@@ -327,8 +327,8 @@ Latin (LTR)         → Arabic (RTL)
 | `.admin-logout` | `--font-body` | `--font-arabic-full` | ✅ L82-L84 |
 | `.admin-nav-item` | `--font-body` | `--font-arabic-full` | ✅ L86-L88 |
 | `.admin-btn-add/export/import` | `--font-body` | `--font-arabic-full` | ✅ L90-L94 |
-| `.dahabcoffee-modal-btn` | `--font-body` | `--font-arabic-full` | ✅ L96-L98 |
-| `.dahabcoffee-modal-field` | `--font-body` | `--font-arabic-full` | ✅ L100-L102 |
+| `.aindalia-modal-btn` | `--font-body` | `--font-arabic-full` | ✅ L96-L98 |
+| `.aindalia-modal-field` | `--font-body` | `--font-arabic-full` | ✅ L100-L102 |
 | `.admin-upload-label` | `--font-body` | `--font-arabic-full` | ✅ L199-L201 |
 | `.auth-title` | `--font-heading` | `--font-arabic-heading` | ✅ L116-L118 |
 | `.cart-title` | `--font-heading` | `--font-arabic-heading` | ✅ L120-L122 |
@@ -342,7 +342,7 @@ Latin (LTR)         → Arabic (RTL)
 | `.admin-view-header h1` | `--font-heading` | `--font-arabic-heading` | ✅ L156-L158 |
 | `.admin-sidebar-header` | `--font-heading` | `--font-arabic-heading` | ✅ L160-L162 |
 | `.admin-modal h2` | `--font-heading` | `--font-arabic-heading` | ✅ L164-L166 |
-| `.dahabcoffee-modal-title` | `--font-heading` | `--font-arabic-heading` | ✅ L168-L170 |
+| `.aindalia-modal-title` | `--font-heading` | `--font-arabic-heading` | ✅ L168-L170 |
 
 ### 8.3 Letter-Spacing Adjustments (RTL)
 
@@ -417,7 +417,7 @@ Latin (LTR)         → Arabic (RTL)
 |---|---|---|---|
 | C1 | `.hero-title` uses `--ls-tight` (0.04em) while `.section-title` uses `--ls-wide` (0.06em). Hero is tighter than section title — reversed from expected hierarchy. | Hero vs Section | ⚠️ Low |
 | C2 | `.contact-info h3` uses `--fw-semibold` (600) at `--text-base` (16px). `.dish-name` also uses `--fw-semibold` (600) but at `--text-lg` (18px). Inconsistent heading weight for similar sub-headings. | Contact vs Dish card | ⚠️ Low |
-| C3 | `.auth-title` (24px) and `.dahabcoffee-modal-title` (20px) have different sizes despite both being modal titles. | Auth modal vs Confirm modal | ⚠️ Low |
+| C3 | `.auth-title` (24px) and `.aindalia-modal-title` (20px) have different sizes despite both being modal titles. | Auth modal vs Confirm modal | ⚠️ Low |
 | C4 | `.admin-view-header h1` uses **both** `--text-2xl` (24px, desktop) and `--text-xl` (20px, ≤768px) and `--text-lg` (18px, ≤480px). Three breakpoints for a single component is inconsistent with the rest of the system which has 0–1 breakpoints. | Admin header | ⚠️ Low |
 | C5 | `.admin-modal h2` uses `--text-xl` (20px) on desktop and `--text-lg` (18px) on mobile. `.auth-title` uses `--text-2xl` (24px) at all sizes. No mobile scaling for auth. | Auth vs Admin modal | ⚠️ Low |
 | C6 | `.btn-primary` uses `--text-xs` (12px) with `--ls-ultra` (0.2em). `.wa-btn` also uses `--text-xs` (12px) but with `--ls-wide` (0.06em). Similar buttons, different letter-spacing. | btn-primary vs wa-btn | ⚠️ Low |
@@ -493,7 +493,7 @@ Latin (LTR)         → Arabic (RTL)
 
 ### 14.1 Industry Standards
 
-| Practice | Industry Standard | DahabCoffee | Gap |
+| Practice | Industry Standard | AINDALIA | Gap |
 |---|---|---|---|
 | Hero headline | 48–80px, serif, weight 700 | clamp(36px,9vw,76px), Playfair 700 | ✅ Aligned |
 | Section title | 28–36px, serif, letter-spaced | `--text-3xl` (32px), Playfair 700, ls-0.06em | ✅ Aligned |
@@ -562,7 +562,7 @@ Latin (LTR)         → Arabic (RTL)
 | R12 | Add `font-kerning: normal` on `--font-heading` for improved serif spacing. | 2 min |
 | R13 | Consider adding `--text-4xl: 2.5rem (40px)` and `--text-5xl: 3rem (48px)` tokens for future heading hierarchy. | 5 min |
 | R14 | Evaluate whether `--text-score` can be replaced by `--text-3xl` with adjusted visual weight. | 5 min |
-| R15 | Standardize modal title size across `.auth-title` (24px) and `.dahabcoffee-modal-title` (20px) — pick one. | 5 min |
+| R15 | Standardize modal title size across `.auth-title` (24px) and `.aindalia-modal-title` (20px) — pick one. | 5 min |
 | R16 | Convert `.google-review-msg` `calc(var(--text-sm) - 1px)` → `var(--text-tight)` for consistency. | 2 min |
 | R17 | Replace `--font-arabic-full` fallback `'Inter', sans-serif` → `'Tahoma', 'Arial', sans-serif` (Inter lacks Arabic glyphs). | 5 min |
 

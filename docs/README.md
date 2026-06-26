@@ -1,4 +1,4 @@
-# DAHAB COFFEE — Menu Digital
+# AINDALIA — Menu Digital
 
 ## Architecture
 

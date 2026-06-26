@@ -8,31 +8,31 @@ const SVG = {
 
 function _showModal({ icon, title, message, input, confirmText, cancelText, showCancel }) {
   return new Promise(resolve => {
-    const existing = document.querySelector('.dahabcoffee-modal-overlay');
+    const existing = document.querySelector('.aindalia-modal-overlay');
     if (existing) existing.remove();
 
     const overlay = document.createElement('div');
-    overlay.className = 'dahabcoffee-modal-overlay';
+    overlay.className = 'aindalia-modal-overlay';
     overlay.innerHTML = `
-      <div class="dahabcoffee-modal">
-        <div class="dahabcoffee-modal-accent"></div>
-        <div class="dahabcoffee-modal-icon">${icon}</div>
-        <div class="dahabcoffee-modal-title">${title}</div>
-        <div class="dahabcoffee-modal-message">${message}</div>
-        ${input !== undefined ? `<div class="dahabcoffee-modal-input"><input type="text" id="dahabcoffeeModalInput" value="${input}" class="dahabcoffee-modal-field"/></div>` : ''}
-        <div class="dahabcoffee-modal-actions">
-          ${showCancel ? `<button class="dahabcoffee-modal-btn dahabcoffee-modal-btn-cancel">${cancelText}</button>` : ''}
-          <button class="dahabcoffee-modal-btn dahabcoffee-modal-btn-confirm">${confirmText}</button>
+      <div class="aindalia-modal">
+        <div class="aindalia-modal-accent"></div>
+        <div class="aindalia-modal-icon">${icon}</div>
+        <div class="aindalia-modal-title">${title}</div>
+        <div class="aindalia-modal-message">${message}</div>
+        ${input !== undefined ? `<div class="aindalia-modal-input"><input type="text" id="aindaliaModalInput" value="${input}" class="aindalia-modal-field"/></div>` : ''}
+        <div class="aindalia-modal-actions">
+          ${showCancel ? `<button class="aindalia-modal-btn aindalia-modal-btn-cancel">${cancelText}</button>` : ''}
+          <button class="aindalia-modal-btn aindalia-modal-btn-confirm">${confirmText}</button>
         </div>
       </div>`;
 
     document.body.appendChild(overlay);
     requestAnimationFrame(() => overlay.classList.add('open'));
 
-    const modal = overlay.querySelector('.dahabcoffee-modal');
-    const confirmBtn = modal.querySelector('.dahabcoffee-modal-btn-confirm');
-    const cancelBtn = modal.querySelector('.dahabcoffee-modal-btn-cancel');
-    const inputEl = modal.querySelector('#dahabcoffeeModalInput');
+    const modal = overlay.querySelector('.aindalia-modal');
+    const confirmBtn = modal.querySelector('.aindalia-modal-btn-confirm');
+    const cancelBtn = modal.querySelector('.aindalia-modal-btn-cancel');
+    const inputEl = modal.querySelector('#aindaliaModalInput');
 
     if (inputEl) setTimeout(() => inputEl.focus(), 200);
 

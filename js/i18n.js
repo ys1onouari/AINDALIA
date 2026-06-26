@@ -92,7 +92,17 @@ export function currentLang() {
 }
 
 export function localized(value) {
-  if (!value || typeof value !== 'object') return String(value || '');
+  if (!value) return '';
+  if (typeof value === 'string') {
+    const trimmed = value.trim();
+    if (trimmed.startsWith('{')) {
+      try { value = JSON.parse(trimmed); }
+      catch { return value; }
+    } else {
+      return value;
+    }
+  }
+  if (typeof value !== 'object') return String(value);
   const lang = currentLang();
-  return value[lang] || value.fr || '';
+  return value[lang] || value.fr || Object.values(value)[0] || '';
 }

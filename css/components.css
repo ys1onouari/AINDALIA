@@ -2000,8 +2000,8 @@
 body.admin-mode .bottom-nav { display: none; }
 body.admin-mode .page { padding-bottom: 0; }
 
-/* ---    Dahab Coffee Custom Modal (Confirm / Alert / Prompt) --- */
-.dahabcoffee-modal-overlay {
+/* ---    AINDALIA Custom Modal (Confirm / Alert / Prompt) --- */
+.aindalia-modal-overlay {
   position: fixed;
   inset: 0;
   background: rgba(var(--black-rgb), 0.85);
@@ -2014,12 +2014,12 @@ body.admin-mode .page { padding-bottom: 0; }
   transition: opacity 0.3s ease;
 }
 
-.dahabcoffee-modal-overlay.open {
+.aindalia-modal-overlay.open {
   opacity: 1;
   pointer-events: all;
 }
 
-.dahabcoffee-modal {
+.aindalia-modal {
   background: var(--card);
   border: 1px solid rgba(var(--secondary-rgb),0.12);
   border-radius: var(--radius-lg);
@@ -2032,11 +2032,11 @@ body.admin-mode .page { padding-bottom: 0; }
   overflow: hidden;
 }
 
-.dahabcoffee-modal-overlay.open .dahabcoffee-modal {
+.aindalia-modal-overlay.open .aindalia-modal {
   transform: scale(1) translateY(0);
 }
 
-.dahabcoffee-modal-accent {
+.aindalia-modal-accent {
   position: absolute;
   top: 0;
   left: 0;
@@ -2046,7 +2046,7 @@ body.admin-mode .page { padding-bottom: 0; }
   opacity: 0.6;
 }
 
-.dahabcoffee-modal-icon {
+.aindalia-modal-icon {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -2059,12 +2059,12 @@ body.admin-mode .page { padding-bottom: 0; }
   overflow: hidden;
 }
 
-.dahabcoffee-modal-icon svg {
+.aindalia-modal-icon svg {
   width: 24px;
   height: 24px;
 }
 
-.dahabcoffee-modal-title {
+.aindalia-modal-title {
   font-family: var(--font-heading);
   font-size: var(--text-xl);
   font-weight: var(--fw-semibold);
@@ -2073,7 +2073,7 @@ body.admin-mode .page { padding-bottom: 0; }
   margin-bottom: var(--space-sm);
 }
 
-.dahabcoffee-modal-message {
+.aindalia-modal-message {
   font-size: var(--text-sm);
   color: var(--text2);
   text-align: center;
@@ -2081,11 +2081,11 @@ body.admin-mode .page { padding-bottom: 0; }
   margin-bottom: var(--space-lg);
 }
 
-.dahabcoffee-modal-input {
+.aindalia-modal-input {
   margin-bottom: var(--space-lg);
 }
 
-.dahabcoffee-modal-field {
+.aindalia-modal-field {
   width: 100%;
   background: var(--bg2);
   border: 1px solid rgba(var(--secondary-rgb),0.12);
@@ -2099,18 +2099,18 @@ body.admin-mode .page { padding-bottom: 0; }
   box-sizing: border-box;
 }
 
-.dahabcoffee-modal-field:focus {
+.aindalia-modal-field:focus {
   border-color: var(--secondary);
   box-shadow: 0 0 0 3px rgba(var(--secondary-rgb),0.12);
 }
 
-.dahabcoffee-modal-actions {
+.aindalia-modal-actions {
   display: flex;
   gap: var(--space-sm);
   justify-content: center;
 }
 
-.dahabcoffee-modal-btn {
+.aindalia-modal-btn {
   padding: 10px 24px;
   border-radius: var(--radius-full);
   font-size: var(--text-xs);
@@ -2124,24 +2124,24 @@ body.admin-mode .page { padding-bottom: 0; }
   min-width: 100px;
 }
 
-.dahabcoffee-modal-btn-confirm {
+.aindalia-modal-btn-confirm {
   background: var(--gradient-primary);
   color: var(--white);
   font-weight: var(--fw-semibold);
 }
 
-.dahabcoffee-modal-btn-confirm:hover {
+.aindalia-modal-btn-confirm:hover {
   box-shadow: 0 4px 20px rgba(var(--secondary-rgb),0.3);
   transform: translateY(-1px);
 }
 
-.dahabcoffee-modal-btn-cancel {
+.aindalia-modal-btn-cancel {
   background: none;
   color: var(--text3);
   border: 1px solid rgba(var(--muted-rgb), 0.2);
 }
 
-.dahabcoffee-modal-btn-cancel:hover {
+.aindalia-modal-btn-cancel:hover {
   color: var(--text);
   border-color: rgba(var(--muted-rgb), 0.4);
   background: rgba(var(--muted-rgb), 0.06);

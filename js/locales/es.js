@@ -69,7 +69,7 @@ export default {
     btnAdmin: 'Administración',
   },
   admin: {
-    title: 'Dahab Coffee',
+    title: 'AINDALIA',
     navItems: 'Platos',
     navCategories: 'Categorías',
     navConfig: 'Configuración',

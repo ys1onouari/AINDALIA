@@ -1,4 +1,4 @@
-# PRODUCT CARD AUDIT — DahabCoffee Digital Menu
+# PRODUCT CARD AUDIT — AINDALIA Digital Menu
 
 > **Scope:** Complete codebase analysis of the product (dish) card system.
 > **Date:** 2026-06-24

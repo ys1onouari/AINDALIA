@@ -1,6 +1,6 @@
-# Configuration Supabase — DAHAB COFFEE
+# Configuration Supabase — AINDALIA
 
-Ce document répertorie **toute** la configuration Supabase utilisée par le projet DAHAB COFFEE. Il permet de migrer vers un nouveau compte/projet Supabase sans rien oublier.
+Ce document répertorie **toute** la configuration Supabase utilisée par le projet AINDALIA. Il permet de migrer vers un nouveau compte/projet Supabase sans rien oublier.
 
 ---
 
@@ -16,7 +16,7 @@ export const SUPABASE_ANON_KEY = '<anon-key-public>';
 ### Fichier `.env` (racine du projet — usage local / CI)
 
 ```env
-# Supabase — DAHAB COFFEE Admin
+# Supabase — AINDALIA Admin
 SUPABASE_URL=https://<project-ref>.supabase.co
 SUPABASE_ANON_KEY=<anon-key-public>
 SUPABASE_SERVICE_KEY=<service-role-key>       # Ne JAMAIS exposer côté client
@@ -50,8 +50,8 @@ Le projet utilise **Supabase Auth** avec la méthode **Email + Password**.
 
 | Champ | Valeur |
 |---|---|
-| Email | `admin@dahabcoffee.com` |
-| Mot de passe | `<your-admin-password>` |
+| Email | `admin@aindalia.com` |
+| Mot de passe | `aindalia2026` |
 
 ### Création de l'admin user
 
@@ -65,7 +65,7 @@ Le projet utilise **Supabase Auth** avec la méthode **Email + Password**.
 curl -X POST https://api.supabase.com/v1/projects/<project-ref>/database/query \
   -H "Authorization: Bearer sbp_<pat>" \
   -H "Content-Type: application/json" \
-  -d '{"query": "SELECT supabase_auth.admin_create_user('\''admin@dahabcoffee.com'\'', '\''<your-admin-password>'\'');"}'
+  -d '{"query": "SELECT supabase_auth.admin_create_user('\''admin@aindalia.com'\'', '\''aindalia2026'\'');"}'
 ```
 
 ### Connexion côté client
@@ -355,7 +355,7 @@ flowchart TD
 
 6. **Créer l'admin user**
    - `Authentication → Users → Add User`
-   - Email : `admin@dahabcoffee.com` / Password : `<your-admin-password>`
+   - Email : `admin@aindalia.com` / Password : `aindalia2026`
 
 7. **Vérifier** que les tables et le bucket existent
    - `Table Editor` : voir `categories`, `menu_items`, `settings`
@@ -367,7 +367,7 @@ flowchart TD
    npx serve . --listen 3000
    ```
    - Naviguer dans le menu (vérifier les données seed)
-   - Se connecter avec `admin@dahabcoffee.com` / `<your-admin-password>`
+   - Se connecter avec `admin@aindalia.com` / `aindalia2026`
    - Vérifier le CRUD des plats/catégories
    - Uploader une image de plat
    - Modifier la configuration
@@ -392,5 +392,5 @@ Ces valeurs sont celles de l'instance Supabase configurée. À remplacer par les
 | PAT | `<your-personal-access-token>` |
 | Anon key | `<your-anon-key>` |
 | Service key | `<your-service-role-key>` |
-| Admin email | `admin@dahabcoffee.com` |
-| Admin password | `<your-admin-password>` |
+| Admin email | `admin@aindalia.com` |
+| Admin password | `aindalia2026` |

@@ -1,4 +1,4 @@
-# DESIGN SYSTEM — DahabCoffee
+# DESIGN SYSTEM — AINDALIA
 
 > Source unique de vérité. Toute valeur visuelle du projet
 > passe par css/variables.css.
@@ -84,7 +84,7 @@
 | `--z-toast` | `300` | `.toast` | Notifications temporaires |
 | `--z-overlay` | `500` | `.auth-overlay`, `.admin-modal-overlay` | Overlays modaux |
 | `--z-modal` | `600` | `.auth-modal`, `.admin-modal` | Modaux |
-| `--z-snack` | `999` | `.dahabcoffee-modal-overlay` | Modaux de confirmation (au-dessus de tout) |
+| `--z-snack` | `999` | `.aindalia-modal-overlay` | Modaux de confirmation (au-dessus de tout) |
 
 ---
 
@@ -114,7 +114,7 @@
 | `--text-sm` | `14px` | `0.875rem` | Corps secondaire, `cart-checkout`, `auth-sub` |
 | `--text-base` | `16px` | `1rem` | Texte de base |
 | `--text-lg` | `18px` | `1.125rem` | `.dish-name`, `.contact-info h3` |
-| `--text-xl` | `20px` | `1.25rem` | `.cart-title`, `.auth-title`, `.dahabcoffee-modal-title` |
+| `--text-xl` | `20px` | `1.25rem` | `.cart-title`, `.auth-title`, `.aindalia-modal-title` |
 | `--text-2xl` | `24px` | `1.5rem` | `.dish-price`, `.auth-title` |
 | `--text-score` | `28px` | `1.75rem` | `.google-review-score` uniquement |
 | `--text-3xl` | `32px` | `2rem` | `.cart-total-amount`, `.section-title` |
@@ -137,7 +137,7 @@
 | `--lh-snug` | `1.2` | `.google-review-score` |
 | `--lh-normal` | `1.25` | `.hero-title` |
 | `--lh-relaxed` | `1.5` | Texte courant |
-| `--lh-loose` | `1.6` | `.dahabcoffee-modal-message`, `.contact-info` |
+| `--lh-loose` | `1.6` | `.aindalia-modal-message`, `.contact-info` |
 | `--lh-looser` | `1.7` | `.hero-tagline` |
 
 ### Letter spacings
