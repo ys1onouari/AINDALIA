@@ -681,7 +681,7 @@
 }
 
 .dish-name {
-  font-family: var(--font-heading);
+  font-family: Inter, sans-serif;
   font-size: var(--text-xl);
   font-weight: var(--fw-bold);
   color: var(--text);
