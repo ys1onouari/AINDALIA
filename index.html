@@ -8,6 +8,8 @@
   <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22%23D40906%22><text y=%2220%22 font-size=%2220%22>F</text></svg>">
   <title data-i18n="site.title">Restaurant · Menu Digital</title>
 
+  <script>(function(){var D=location.search.indexOf('debug=')!==-1||localStorage.getItem('dahab_debug')==='1';if(!D)return;window.__DAHAB_DEBUG={enabled:true,logs:[],startTime:Date.now()};function log(l,m){window.__DAHAB_DEBUG.logs.push({time:new Date().toISOString(),level:l,msg:m});while(window.__DAHAB_DEBUG.logs.length>500)window.__DAHAB_DEBUG.logs.shift();try{localStorage.setItem('dahab_debug_logs',JSON.stringify(window.__DAHAB_DEBUG.logs.slice(-200)))}catch(e){}console.log('[DahabDebug:'+l+']',m)}log('INIT','User-Agent: '+navigator.userAgent);log('INIT','Platform: '+navigator.platform+', Vendor: '+navigator.vendor);log('INIT','URL: '+location.href);window.onerror=function(msg,source,line,col,err){log('FATAL','msg='+msg+' source='+source+':'+line+':'+col+' stack='+(err&&err.stack?err.stack:'N/A'));return false};window.addEventListener('unhandledrejection',function(e){log('PROMISE','reason='+(e.reason?(e.reason.message||String(e.reason)):'unknown'))});window.addEventListener('error',function(e){var t=e.target;if(t&&(t.tagName==='IMG'||t.tagName==='SCRIPT'||t.tagName==='LINK'||t.tagName==='IFRAME')){log('RESOURCE','tag='+t.tagName+' src='+(t.src||t.href||'N/A'))}},true);log('INIT','Debug mode active');window.__DAHAB_DEBUG.log=log})();</script>
+
   <!-- Polices Google -->
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
@@ -110,7 +112,7 @@
     <div class="hero-pattern">
       <div class="hero-video-wrap" id="heroVideoWrap">
         <iframe id="heroVideo" src="https://www.youtube.com/embed/tJlzIJaokVY?autoplay=1&loop=1&mute=1&start=4&end=66&playlist=tJlzIJaokVY"
-          allow="autoplay; encrypted-media" title="Restaurant Background"></iframe>
+          allow="autoplay; encrypted-media; fullscreen" allowfullscreen playsinline webkit-playsinline title="Restaurant Background"></iframe>
         <div class="hero-video-overlay"></div>
       </div>
     </div>

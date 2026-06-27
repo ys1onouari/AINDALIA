@@ -326,8 +326,7 @@
       transparent 40%,
       rgba(var(--black-rgb), 0.7) 100%
     );
-  backdrop-filter: blur(0px);
-  -webkit-backdrop-filter: blur(0px);
+
 }
 
 .hero-glow {

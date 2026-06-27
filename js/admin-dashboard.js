@@ -344,7 +344,9 @@ function setupItemForm(item) {
   fileInput?.addEventListener('change', () => {
     const preview = document.getElementById('adminPreview');
     if (preview && fileInput.files[0]) {
-      preview.src = URL.createObjectURL(fileInput.files[0]);
+      if (preview.dataset.objectUrl) URL.revokeObjectURL(preview.dataset.objectUrl);
+      preview.dataset.objectUrl = URL.createObjectURL(fileInput.files[0]);
+      preview.src = preview.dataset.objectUrl;
       preview.classList.add('show');
     }
     if (fileLabel && fileInput.files[0]) {

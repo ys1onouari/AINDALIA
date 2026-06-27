@@ -39,6 +39,9 @@ document.addEventListener('DOMContentLoaded', async () => {
   }
   initNavigation();
   initAuth();
+  if (window.__DAHAB_DEBUG?.enabled) {
+    import('./debug.js').then(m => m.initDebug()).catch(() => {});
+  }
   console.timeEnd('total');
 });
 

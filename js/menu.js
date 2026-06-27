@@ -190,6 +190,7 @@ let cart = [];
 let activeFilterId = null;
 let _listenersInitialized = false;
 let _addingToCart = false;
+let _revealObserver = null;
 
 function qsa(sel, ctx) {
   return (ctx || document).querySelectorAll(sel);
@@ -495,18 +496,19 @@ function openWhatsApp(msg) {
 }
 
 function setupReveal() {
-  const obs = new IntersectionObserver(
+  if (_revealObserver) _revealObserver.disconnect();
+  _revealObserver = new IntersectionObserver(
     (entries) => {
       entries.forEach(e => {
         if (e.isIntersecting) {
           e.target.classList.add('visible');
-          obs.unobserve(e.target);
+          _revealObserver.unobserve(e.target);
         }
       });
     },
     { threshold: 0.08 }
   );
-  document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+  document.querySelectorAll('.reveal').forEach(el => _revealObserver.observe(el));
 }
 
 function setupMenuEventListeners() {
