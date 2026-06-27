@@ -54,4 +54,5 @@ npx serve . --listen 3000
 - Auth has client-side lock: 3 failed attempts → 24h block (stored in localStorage key `dahabcoffee_lock`)
 - **No tests exist** — Playwright `@playwright/test@^1.61.0` is a dependency but no test files or config are present
 - **Stale docs**: `README.md` references a `luxora/` subdirectory (files are at root). `SUPABASE_SETUP.md` and `SUPABASE_MIGRATION_GUIDE.md` claim fallback data exists in `menu.js` — it does not; the app shows toasts on failure
+- `setupMenuEventListeners()` is idempotent (guarded by `_listenersInitialized`) — do NOT move it out of `initMenu()`, the flag ensures it runs once
 - `.env` contains real Supabase secrets (in `.gitignore`). `SUPABASE_MIGRATION_GUIDE.md` also contains secrets and is gitignored

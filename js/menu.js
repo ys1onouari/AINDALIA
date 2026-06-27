@@ -188,6 +188,8 @@ export function renderContact() {
 
 let cart = [];
 let activeFilterId = null;
+let _listenersInitialized = false;
+let _addingToCart = false;
 
 function qsa(sel, ctx) {
   return (ctx || document).querySelectorAll(sel);
@@ -352,6 +354,9 @@ export function renderMenuGrid(items) {
 }
 
 function addToCart(id) {
+  if (_addingToCart) return;
+  _addingToCart = true;
+  setTimeout(() => { _addingToCart = false; }, 300);
   if (!isOrderingEnabled()) return;
   const dish = MENU_DATA.find(d => d.id === id);
   if (!dish) return;
@@ -505,6 +510,8 @@ function setupReveal() {
 }
 
 function setupMenuEventListeners() {
+  if (_listenersInitialized) return;
+  _listenersInitialized = true;
   $('filterChips')?.addEventListener('click', (e) => {
     const chip = e.target.closest('.chip');
     if (chip?.dataset.categoryId) {
@@ -523,7 +530,7 @@ function setupMenuEventListeners() {
     if (!btn) return;
 
     const action = btn.dataset.action;
-    e.stopPropagation();
+    e.stopImmediatePropagation();
 
     if (action === 'cart') {
       addToCart(id);
