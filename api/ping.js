@@ -1,6 +1,7 @@
 // api/ping.js — Vercel Serverless Function
 // KeepAlive endpoint for Supabase Free Tier projects.
-// Calls the Supabase Auth health endpoint to prevent project pausing.
+// Executes a real PostgREST query against a dedicated keepalive table
+// to generate actual database activity and prevent project pausing.
 //
 // Usage:
 //   GET /api/ping
@@ -21,7 +22,7 @@
 // Response (bad method): 405
 //   { ok: false, service: "supabase", status: "unreachable", httpStatus: 405, latency: 0,    timestamp: "...", error: "..." }
 
-const SUPABASE_HEALTH_PATH = '/auth/v1/health';
+const SUPABASE_QUERY_PATH = '/rest/v1/keepalive?select=id&limit=1';
 const REQUEST_TIMEOUT_MS = 10000;
 
 function extractProjectRef(url) {
@@ -86,19 +87,20 @@ export default async function handler(req, res) {
     );
   }
 
-  const healthUrl = `${supabaseUrl}${SUPABASE_HEALTH_PATH}`;
+  const queryUrl = `${supabaseUrl}${SUPABASE_QUERY_PATH}`;
 
-  console.log(`[api/ping] Starting — GET ${SUPABASE_HEALTH_PATH}`);
+  console.log(`[api/ping] Starting — GET ${SUPABASE_QUERY_PATH}`);
 
   try {
     const controller = new AbortController();
     const timeoutId = setTimeout(() => controller.abort(), REQUEST_TIMEOUT_MS);
 
-    const response = await fetch(healthUrl, {
+    const response = await fetch(queryUrl, {
       signal: controller.signal,
       headers: {
         'Content-Type': 'application/json',
-        apikey: supabaseKey
+        apikey: supabaseKey,
+        Authorization: `Bearer ${supabaseKey}`
       }
     });
 
